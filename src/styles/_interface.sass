@@ -1,0 +1,83 @@
+*
+  box-sizing: border-box
+  color: inherit
+body
+  margin: 0
+  +bold
+  color: $text-color
+img
+  width: 100%
+  height: 100%
+a
+  text-decoration: none
+  color: inherit
+  &:hover
+    text-decoration: underline 
+.container
+  max-width: 1171px
+  margin: auto
+.btn
+  border: none
+  border-radius: 10px
+  +bold
+  background-color: $main-color
+  &:focus
+    outline: none
+  &:hover
+    cursor: pointer
+    background-color: lighten($main-color, 10%)
+.input
+  border: 1px solid #dddddd
+  padding-left: 30px
+  border-radius: 10px
+  +reg
+  height: 65px
+  font-size: 15px
+  &:focus
+    border-color: $input-focus
+    outline: none
+  &-wrap
+    display: flex
+.title
+  font-size: 30px
+  line-height: 45px
+.subtitle
+  display: block
+  margin: auto
+  text-align: center
+  font-size: 19px
+.arrows
+  &__right, &__left
+    &:hover
+      cursor: pointer
+.important
+  +bold
+div.invalid
+  margin-top: 10px
+  padding-left: 10px
+input.invalid
+  border: solid 1px red
+@media (max-width: 1200px)
+  .container
+    width: 95%
+  .input
+    &-wrap
+      flex-direction: column
+@media (max-width: 992px)
+  a
+    &:hover
+      text-decoration: none
+  .btn
+    &:hover
+      background-color: $main-color
+@media (max-width: 576px)
+  .title
+    font-size: 18px
+    line-height: 1.2
+  .subtitle
+    font-size: 13px
+  .input
+    &-wrap
+      &:first-child
+        margin-top: 0
+  

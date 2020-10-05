@@ -1,0 +1,87 @@
+.modal
+  display: none
+  justify-content: center
+  align-items: center
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(#000, 0.5)
+  z-index: 2
+  &-block
+    align-items: center
+    position: absolute
+    top: 20px
+    padding: 20px 100px
+    max-width: 570px
+    text-align: center
+    background-color: #fff
+  &__title
+    margin-bottom: 18px
+    font-size: 22px
+    line-height: 33px
+  &__subtitle
+    margin-bottom: 20px
+    font-size: 15.5px
+    line-height: 35px
+  &__input
+    display: block
+    margin-top: 7px
+    width: 100%
+    height: 45px
+  &__btn
+    margin-top: 10px
+    margin-bottom: 30px
+    padding: 20px 115px
+    font-size: 16px
+  &__phone
+    display: block
+    font-size: 24px
+  &__close
+    position: absolute
+    top: 5px
+    right: 5px
+    border-radius: 50%
+    font-size: 20px
+  &_active
+    display: flex
+@media (max-width: 768px)
+  .modal
+    &-block
+      padding: 58px 60px
+    &__title
+      margin: auto
+      margin-bottom: 15px
+      font-size: 20px
+      line-height: 25px
+    &__subtitle
+      margin: auto
+      margin-bottom: 10px
+      font-size: 14px
+      line-height: 1.2
+    &__input
+      margin: auto
+      margin-top: 10px
+      padding-left: 15px
+      width: 80%
+    &__btn
+      margin-top: 20px
+      padding: 20px 50px
+      width: 80%
+      font-size: 13px
+    &__footer
+      font-size: 12px
+    &__phone
+      font-size: 20px
+@media (max-width: 768px)
+  .modal
+    &-block
+      padding: 30px 15px
+@media (max-width: 576px)
+  .modal
+    &__title
+      max-width: 350px
+    &__subtitle
+      max-width: 250px
+  

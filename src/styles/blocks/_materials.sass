@@ -1,0 +1,82 @@
+.materials
+  padding-bottom: 143px
+  &__promise
+    text-align: center
+    font-size: 32px
+    +reg
+    line-height: 50px
+    &-block
+      background-color: $main-color
+  &-block
+    margin-bottom: 100px
+    padding-top: 40px
+    padding-bottom: 50px
+  &__feature
+    max-width: 370px
+    background-color: $feature-bg
+    &s
+      display: flex
+      justify-content: center
+    &:nth-child(even)
+      margin-right: 30px
+      margin-left: 30px
+  &__text
+    margin-top: 22px
+    margin-left: 26px
+    margin-bottom: 30px
+    max-width: 295px
+    font-size: 16px
+    +reg
+    line-height: 23px
+    color: $text-secondary
+    &:nth-child(odd)
+      margin-bottom: 50px
+  &__img
+    width: 370px
+    height: 260px
+@media (max-width: 1200px)
+  .materials
+    &__text
+      max-width: 220px
+      margin-top: 25px
+      margin-left: 22px
+      margin-bottom: 25px
+      font-size: 12px
+      line-height: 16.83px
+      &:nth-child(odd)
+        margin-bottom: 40px
+    &__img
+      width: 275px
+      height: 195px
+@media (max-width: 992px)
+  .materials
+    padding-bottom: 77px
+    &__promise
+      font-size: 18px
+      line-height: 1.3
+    &-block
+      margin-bottom: 59px
+      padding-top: 60px
+      padding-bottom: 70px
+    &__feature
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+      &:nth-child(even)
+        margin-right: 0
+        margin-left: 0
+      &s
+        flex-direction: column
+        align-items: center
+@media (max-width: 576px)
+  .materials
+    &__text
+      margin-top: 20px
+    &__title
+      margin-top: 20px
+    &__contacts
+@media (max-width: 320px)
+  .materials
+    &__promise
+      margin: auto
+      max-width: 260px

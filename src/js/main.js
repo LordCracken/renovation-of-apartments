@@ -1,9 +1,9 @@
-// Инициализация WOW.js 
+// Инициализация WOW.js
 new WOW().init();
 
 // Загрузка карты при скролле
-$(document).on('scroll', function () {
-  $('#map').addClass('footer__map_active');
+$(document).on("scroll", function () {
+  $("#map").addClass("footer__map_active");
 });
 
 // Валидация форм
@@ -15,32 +15,32 @@ $(document).ready(function () {
       username: {
         required: true,
         minlength: 2,
-        maxlength: 15
+        maxlength: 15,
       },
       phone: "required",
       email: {
         required: true,
-        email: true
-      }
+        email: true,
+      },
     },
     messages: {
       username: {
         required: "Заполните поле",
         minlength: jQuery.validator.format("Введите не меньше {0} символов"),
-        maxlength: jQuery.validator.format("Введите не больше {0} символов")
+        maxlength: jQuery.validator.format("Введите не больше {0} символов"),
       },
       email: {
         required: "Заполните поле",
-        email: "Введите корректный email"
+        email: "Введите корректный email",
       },
       phone: {
-        required: "Заполните поле"
-      }
+        required: "Заполните поле",
+      },
     },
     submitHandler: function (form) {
       form.submit();
-      $('.brif__input').val('');
-    }
+      $(".brif__input").val("");
+    },
   });
   $("#offer-form").validate({
     errorClass: "invalid",
@@ -49,24 +49,24 @@ $(document).ready(function () {
       username: {
         required: true,
         minlength: 2,
-        maxlength: 15
+        maxlength: 15,
       },
-      phone: "required"
+      phone: "required",
     },
     messages: {
       username: {
         required: "Заполните поле",
         minlength: jQuery.validator.format("Введите не меньше {0} символов"),
-        maxlength: jQuery.validator.format("Введите не больше {0} символов")
+        maxlength: jQuery.validator.format("Введите не больше {0} символов"),
       },
       phone: {
-        required: "Заполните поле"
-      }
+        required: "Заполните поле",
+      },
     },
     submitHandler: function (form) {
       form.submit();
-      $('.offer__input').val('');
-    }
+      $(".offer__input").val("");
+    },
   });
   $("#modal-form").validate({
     errorClass: "invalid",
@@ -75,26 +75,29 @@ $(document).ready(function () {
       username: {
         required: true,
         minlength: 2,
-        maxlength: 15
+        maxlength: 15,
       },
-      phone: "required"
+      phone: "required",
     },
     messages: {
       username: {
         required: "Заполните поле",
         minlength: jQuery.validator.format("Введите не меньше {0} символов"),
-        maxlength: jQuery.validator.format("Введите не больше {0} символов")
+        maxlength: jQuery.validator.format("Введите не больше {0} символов"),
       },
       phone: {
-        required: "Заполните поле"
-      }
+        required: "Заполните поле",
+      },
     },
     submitHandler: function (form) {
       form.submit();
-      $('.modal__input').val('');
-    }
+      $(".modal__input").val("");
+    },
   });
-  jQuery(function ($) {
-    $(".phone").mask("8 (999) 999-99-99", { autoclear: false });
+  var phoneInputs = document.querySelectorAll("input.phone");
+  phoneInputs.forEach((input) => {
+    IMask(input, {
+      mask: "+{7} (000) 000-00-00",
+    });
   });
 });

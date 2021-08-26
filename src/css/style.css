@@ -3915,6 +3915,10 @@ a:hover {
   text-decoration: underline;
 }
 
+body.opened-modal {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1171px;
   margin: auto;
